@@ -1,0 +1,14 @@
+
+<ul class="letters">
+  <% @letters.each do |letter| %>
+    <li class="letter"><%=letter%></li>
+  <% end %>
+</ul>
+
+<div class="container">
+  <p>What's the longest word you can find?</p>
+  <form action="/score" class="entry">
+    <input type="text">
+    <input type="submit" value="submit">
+  </form>
+</div>
