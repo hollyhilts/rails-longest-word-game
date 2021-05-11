@@ -1,4 +1,19 @@
+<h1>Result</h1>
+
+<p>you guessed <%= params[:guess] %></p>
 
 
+<% if @score == 0 %>
+  <p> you lose</p>
+  <p>Sorry but <strong><%= params[:guess].upcase %></strong> can't be built out of <%= @lets.gsub(',', ', ') %></p>
+<% elsif @score == 1 %>
+  <p>Sorry but <strong><%= params[:guess].upcase %></strong> does not seem to be a valid English word!</p>
+<% elsif @score == 2 %>
+  <p><strong>Congratulations!</strong> <%= params[:guess].upcase %> is a valid English word!</p>
+<% end %>
+<%  %>
+<%  %>
+<%  %>
+<%  %>
 
-<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<p class="link"><%= link_to 'new game', new_path %></p>
