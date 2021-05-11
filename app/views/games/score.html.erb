@@ -1,8 +1,5 @@
 <h1>Result</h1>
 
-<p>you guessed <%= params[:guess] %></p>
-
-
 <% if @score == 0 %>
   <p> you lose</p>
   <p>Sorry but <strong><%= params[:guess].upcase %></strong> can't be built out of <%= @lets.gsub(',', ', ') %></p>
@@ -11,9 +8,5 @@
 <% elsif @score == 2 %>
   <p><strong>Congratulations!</strong> <%= params[:guess].upcase %> is a valid English word!</p>
 <% end %>
-<%  %>
-<%  %>
-<%  %>
-<%  %>
 
 <p class="link"><%= link_to 'new game', new_path %></p>
